@@ -39,7 +39,10 @@
                 </tr>
                 <tr>
                     <th>Types</th>
-                    <td><input type="text"></td>                    
+                    <td><select class="form-control" id="userType" required>
+                        <option *ngFor="let user of userTypes" [value]="title">{{user}}</option>
+                        </select>
+                    </td>                    
                 </tr>
                 <tr>
                     <th>Email</th>

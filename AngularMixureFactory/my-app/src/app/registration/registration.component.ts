@@ -16,5 +16,7 @@ export class RegistrationComponent implements OnInit {
   {
     this.isRestisterSuccess = 'Register Succesfull';
   }
+  userTypes = ['Retailer', 'Sales Person',
+            'Admin'];
 
 }
