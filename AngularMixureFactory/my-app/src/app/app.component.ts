@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Best Mixute Production Factory';
-  
+  title = 'Best Mixute Production Factory';  
 }
