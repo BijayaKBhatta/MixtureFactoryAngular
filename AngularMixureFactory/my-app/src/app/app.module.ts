@@ -9,11 +9,14 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginUserComponent } from './login-user/login-user.component';
 
 import {RouterModule,Routes} from '@angular/router';
+import { FetchRegistrationDetailsComponent } from './fetch-registration-details/fetch-registration-details.component';
 
+import { HttpModule } from '@angular/http';
 
 const appRoutes: Routes= [
   {path:'registration',component:RegistrationComponent},
-  {path: 'login',component:LoginUserComponent}
+  {path: 'login',component:LoginUserComponent},
+  {path: 'fetchCustDetails', component:FetchRegistrationDetailsComponent}
 
 ];
 
@@ -21,10 +24,12 @@ const appRoutes: Routes= [
   declarations: [ 
     AppComponent,
     RegistrationComponent,
-    LoginUserComponent
+    LoginUserComponent,
+    FetchRegistrationDetailsComponent
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
