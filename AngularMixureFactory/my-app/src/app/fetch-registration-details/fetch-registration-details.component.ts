@@ -17,16 +17,36 @@ export class FetchRegistrationDetailsComponent implements OnInit {
 
   }
 
+
   getUser(){
         //this.ff = 'Register Suchhhhhhhhcesfull';
                this.fetchCustomerDetailsService.getCustomerDetails().subscribe(
                 res => {
                   console.log(res);
                   this.servicecall = 'Webservice called :    ';
-                  this.country = res.RestResponse.messages[1] ;
-                  this.country = this.country + res.RestResponse.messages[0];
+                  this.country  = res.id;
+                  this.country = this.country + res.name;
+                  //this.country = res.RestResponse.messages[0] ;
+                  //this.country = this.country + res.RestResponse.messages[1];
+                  //json handing
                 } 
                );
 
   }
+
+
+  getUserpost(){
+   // https://www.youtube.com/watch?v=L7xPwhwbcHE
+        //this.ff = 'Register Suchhhhhhhhcesfull';
+               this.fetchCustomerDetailsService.postImplement().subscribe(
+                res => {
+                  console.log(res);
+                  this.servicecall = 'Webservice called :    ';
+                  this.country  = res.id;
+                  this.country = this.country + res.name;
+                } 
+               );
+
+  }
+
 }

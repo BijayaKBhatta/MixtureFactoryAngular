@@ -12,6 +12,7 @@ import {RouterModule,Routes} from '@angular/router';
 import { FetchRegistrationDetailsComponent } from './fetch-registration-details/fetch-registration-details.component';
 
 import { HttpModule } from '@angular/http';
+import { MaterialModule } from '@angular/material';
 
 const appRoutes: Routes= [
   {path:'registration',component:RegistrationComponent},
@@ -30,6 +31,7 @@ const appRoutes: Routes= [
   imports: [
     BrowserModule,
     HttpModule,
+    MaterialModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
