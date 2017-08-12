@@ -1,0 +1,25 @@
+https://github.com/HussainAltaf/ProductDataRepo.git
+https://github.com/BijayaKBhatta/MixtureFactoryAngular.git
+------------------------------Some command related to GIT-----------
+ng new my-app  - to create new project 
+cd my-app  -- enter into project
+ng server-open  ---start the server
+
+create a new component
+------
+ng generate component registration
+
+-----------
+
+
+Git command
+---------------
+
+git remote set-url origin https://github.com/BijayaKBhatta/MixtureFactoryAngular.git
+----
+
+git add .
+git status
+git commit -m "comment"
+git push origin master
+---------------------------------------

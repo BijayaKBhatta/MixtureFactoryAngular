@@ -27,11 +27,32 @@ public postImplement(): Observable<any>
   .map(res => res.json())
 
 }
-public getCustomerDetails(): Observable<any>
+
+
+public getCustomerDetails(searchId): Observable<any>
   {
     const searchCust = 'Customer details';
     //call API Here
-    const URL = 'http://127.0.0.1:8080/productdata?id=10';
+    var idd=10;
+    const URL = 'http://127.0.0.1:8080/productdata?id='+searchId;
+    //const URL = 'http://services.groupkt.com/country/get/iso2code/IN';
+    //this.http.post(URL,aaa JSON.stringify(searchCust), {headers:{'':''})
+    return this.http.get(URL).map(
+      res => {
+        const data = res.json();
+        return data;
+      }
+    )
+
+  }
+
+  public loginCustomerDetails(username): Observable<any>
+  {
+    const searchCust = 'Customer details';
+    //call API Here
+    var idd=111;
+    const URL = 'http://127.0.0.1:8080/productdata?id='+username;
+    console.log(URL);
     //const URL = 'http://services.groupkt.com/country/get/iso2code/IN';
     //this.http.post(URL,aaa JSON.stringify(searchCust), {headers:{'':''})
     return this.http.get(URL).map(

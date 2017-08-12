@@ -32,6 +32,7 @@ const appRoutes: Routes= [
     BrowserModule,
     HttpModule,
     MaterialModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

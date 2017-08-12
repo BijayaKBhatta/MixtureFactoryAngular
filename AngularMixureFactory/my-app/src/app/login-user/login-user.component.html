@@ -1,19 +1,19 @@
   
 <br><br><br><br><br><h1>Login here</h1>
-
+{{isloginSuccess}}
 <div style="text-align:center">
       <table border="2">
               <tr>
                   <th>NAME</th>
-                      <td><input type="text"></td>
+                      <td><input type="text" [(ngModel)]="username"></td>
                   </tr>
                   <tr>
                       <th>PASSWORD</th>
-                      <td><input type="text"></td>
+                      <td><input type="text" [(ngModel)]="password"></td>
                   </tr>	
                   <tr>
                     <td></td>
-                    <td><button (click)="registerUser()">Login</button></td>
+                    <td><button (click)="loginUser()">Login</button></td>
                 </tr>	
           </table>
   </div>

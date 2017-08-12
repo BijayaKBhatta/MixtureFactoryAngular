@@ -18,6 +18,5 @@ export class RegistrationComponent implements OnInit {
   }
   userTypes = ['Retailer', 'Sales Person',
             'Admin'];
-
 }
           
