@@ -18,11 +18,12 @@ export class FetchCustomerDetailsService {
 public postImplement(): Observable<any>
 {
 
-  var json = JSON.stringify({var1: 'test', var2: 11});
+  var json = JSON.stringify({var1: 'test', var2: '11'});
   var params = 'json='+json;
   var headers = new Headers()
   headers.append('Content-Type', 'application/json');
-  const URL = 'http://validata.jsontest.com';
+  //const URL = 'http://validata.jsontest.com';
+  const URL = 'http://localhost:8080/productdata/product/add';
   return this.http.post(URL,params)
   .map(res => res.json())
 

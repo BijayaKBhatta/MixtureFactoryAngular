@@ -46,10 +46,11 @@ export class FetchRegistrationDetailsComponent implements OnInit {
         //this.ff = 'Register Suchhhhhhhhcesfull';
                this.fetchCustomerDetailsService.postImplement().subscribe(
                 res => {
+                  console.log('ressssssssssss');
                   console.log(res);
                   this.servicecall = 'Webservice called :    ';
-                  this.country  = res.id;
-                  this.country = this.country + res.name;
+                  //this.country  = res.id;
+                 // this.country = this.country + res.name;
                 } 
                );
 
