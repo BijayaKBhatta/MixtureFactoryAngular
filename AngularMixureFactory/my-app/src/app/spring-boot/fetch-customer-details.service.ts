@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http , Headers, RequestOptions} from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import 'rxjs/add/operator/map';
 
+import 'rxjs/add/operator/map';
 @Injectable()
 export class FetchCustomerDetailsService {
 
@@ -10,25 +10,23 @@ export class FetchCustomerDetailsService {
 
 
  headers = new Headers({
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/x-www=form-urlencoder'
   });
   //https://stackoverflow.com/questions/37051476/how-do-i-post-json-in-angular-2
 
 
 public postImplement(): Observable<any>
 {
-
-  var json = JSON.stringify({var1: 'test', var2: '11'});
-  var params = 'json='+json;
-  var headers = new Headers()
-  headers.append('Content-Type', 'application/json');
-  //const URL = 'http://validata.jsontest.com';
+  let body = JSON.stringify({ id: '10', name: 'CoreJava' });
+let headers = new Headers({ 'Content-Type': 'application/json' });
+let options = new RequestOptions({ headers: headers });
   const URL = 'http://localhost:8080/productdata/product/add';
-  return this.http.post(URL,params)
+  return this.http.post(URL,
+    body,
+      options
+    )
   .map(res => res.json())
-
 }
-
 
 public getCustomerDetails(searchId): Observable<any>
   {

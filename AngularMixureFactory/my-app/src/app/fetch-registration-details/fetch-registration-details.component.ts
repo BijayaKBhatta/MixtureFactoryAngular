@@ -30,7 +30,7 @@ export class FetchRegistrationDetailsComponent implements OnInit {
                 res => {
                   console.log(res);
                   this.servicecall = 'Webservice called :    --'+this.str;
-                  this.country  = res.id;
+                  this.country  = res.result;
                   this.country = this.country + res.name;
                   this.country = this.searchId;
                   //this.country = res.RestResponse.messages[0] ;
