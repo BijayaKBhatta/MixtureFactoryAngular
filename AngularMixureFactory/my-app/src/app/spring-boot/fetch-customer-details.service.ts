@@ -17,16 +17,31 @@ export class FetchCustomerDetailsService {
 
 public postImplement(): Observable<any>
 {
-  let body = JSON.stringify({ id: '10', name: 'CoreJava' });
+  let body = JSON.stringify({ id: '4', name: 'Sanjay' });
 let headers = new Headers({ 'Content-Type': 'application/json' });
 let options = new RequestOptions({ headers: headers });
-  const URL = 'http://localhost:8080/productdata/product/add';
+  const URL = 'http://localhost:8181/productdata/product/add';
   return this.http.post(URL,
     body,
       options
     )
   .map(res => res.json())
 }
+
+public postImplementNew(name1,password1): Observable<any>
+{
+  let body = JSON.stringify({ id: '13', name: name1,  password:password1});
+let headers = new Headers({ 'Content-Type': 'application/json' });
+let options = new RequestOptions({ headers: headers });
+  const URL = 'http://localhost:8185/registeruser/register/add';
+  return this.http.post(URL,
+    body,
+      options
+    )
+  .map(res => res.json())
+}
+
+
 
 public getCustomerDetails(searchId): Observable<any>
   {

@@ -13,7 +13,8 @@ export class RegistrationComponent implements OnInit {
 
   public isRestisterSuccess = '';
   constructor(private fetchCustomerDetailsService: FetchCustomerDetailsService ) { }
-  str: string;
+  name: string;
+  password:string;
 
   ngOnInit() {
   }
@@ -27,7 +28,7 @@ export class RegistrationComponent implements OnInit {
 
 
 registerNewUser(){
-               this.fetchCustomerDetailsService.getCustomerDetails(this.str).subscribe(
+               this.fetchCustomerDetailsService.postImplementNew(this.name,this.password).subscribe(
                 res => {
                   console.log(res);
                   //this.country = res.RestResponse.messages[0] ;
