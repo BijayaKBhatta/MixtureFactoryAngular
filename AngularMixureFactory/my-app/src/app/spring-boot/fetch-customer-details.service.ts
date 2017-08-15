@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http , Headers, RequestOptions} from '@angular/http';
 import { Observable } from 'rxjs/Rx';
+import { User } from '../model/user';
 
 import 'rxjs/add/operator/map';
 @Injectable()
@@ -28,20 +29,24 @@ let options = new RequestOptions({ headers: headers });
   .map(res => res.json())
 }
 
-public postImplementNew(name1,password1): Observable<any>
+//public postImplementNew(name1,password1,shopname,address,role,
+  //            phone1, phone2, lnumber, salespersonname,email): Observable<any>
+  
+public postImplementNew(user: User): Observable<any>
 {
+  let name1 = user.name;
+  let password1 = user.password;
+ // console.log("in post call");
   let body = JSON.stringify({ id: '13', name: name1,  password:password1});
 let headers = new Headers({ 'Content-Type': 'application/json' });
 let options = new RequestOptions({ headers: headers });
   const URL = 'http://localhost:8185/registeruser/register/add';
   return this.http.post(URL,
-    body,
+    user,
       options
     )
   .map(res => res.json())
 }
-
-
 
 public getCustomerDetails(searchId): Observable<any>
   {

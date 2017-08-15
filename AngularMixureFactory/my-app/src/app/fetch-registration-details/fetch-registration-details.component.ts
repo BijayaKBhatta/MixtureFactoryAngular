@@ -13,7 +13,7 @@ export class FetchRegistrationDetailsComponent implements OnInit {
   public country='';
   public searchId='';
   public ff='aaa';
-  constructor(private fetchCustomerDetailsService: FetchCustomerDetailsService ) { }
+  constructor(private fetchCustomerDetailsService: FetchCustomerDetailsService) { }
   str: string;
 
   ngOnInit() {

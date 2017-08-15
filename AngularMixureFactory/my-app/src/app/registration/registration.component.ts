@@ -15,6 +15,16 @@ export class RegistrationComponent implements OnInit {
   constructor(private fetchCustomerDetailsService: FetchCustomerDetailsService ) { }
   name: string;
   password:string;
+  shopname: string;
+  address: string;
+  role: string;
+  phone1: string;
+  phone2: string;
+  lnumber: string;
+  salespersonname: string;
+  email: string;
+
+  model: any = {};
 
   ngOnInit() {
   }
@@ -28,7 +38,9 @@ export class RegistrationComponent implements OnInit {
 
 
 registerNewUser(){
-               this.fetchCustomerDetailsService.postImplementNew(this.name,this.password).subscribe(
+  //this.name,this.password,this.shopname,this.address,this.role,
+    //          this.phone1, this.phone2, this.lnumber, this.salespersonname,this.email
+               this.fetchCustomerDetailsService.postImplementNew(this.model).subscribe(
                 res => {
                   console.log(res);
                   //this.country = res.RestResponse.messages[0] ;
