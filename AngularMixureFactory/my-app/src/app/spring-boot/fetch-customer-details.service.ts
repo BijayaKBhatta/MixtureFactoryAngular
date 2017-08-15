@@ -64,6 +64,7 @@ public getCustomerDetails(searchId): Observable<any>
 
   public loginCustomerDetails(user: User): Observable<any>
   {  
+    console.log(user);
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
     const URL = 'http://localhost:8185/registeruser/login';
