@@ -13,7 +13,7 @@ import { FetchRegistrationDetailsComponent } from './fetch-registration-details/
 
 import { HttpModule } from '@angular/http';
 //import { MaterialModule } from '@angular/material';
-import { AlertModule } from 'ngx-bootstrap';
+//import { AlertModule } from 'ngx-bootstrap';
 import{HeaderComponent} from './header/header.component'
 import{FooterComponent} from './footer/footer.component'
 
@@ -35,7 +35,7 @@ const appRoutes: Routes= [
     FooterComponent
   ],
   imports: [
-    AlertModule.forRoot(),
+   // AlertModule.forRoot(),
     BrowserModule,
     HttpModule,
     //MaterialModule,
