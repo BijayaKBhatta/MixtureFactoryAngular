@@ -27,7 +27,7 @@ loginUser()
                this.fetchCustomerDetailsService.loginCustomerDetails(this.model).subscribe(
                 res => {
                   console.log(res);
-                  this.isloginSuccess = 'Response from webserice with username :    --'+res.id+'password: '+res.name;
+                  this.isloginSuccess = 'Response from webservice :    --'+res;//.id+'password: '+res.name;
                   //this.country = res.RestResponse.messages[0] ;
                   //this.country = this.country + res.RestResponse.messages[1];
                   //json handing
