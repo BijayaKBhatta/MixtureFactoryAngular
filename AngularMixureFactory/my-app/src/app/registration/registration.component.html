@@ -1,62 +1,58 @@
 {{isRestisterSuccess}}
 <div style="text-align:center">
-    <table border="2">
-        <tr>
-            <th>NAME</th>
-            <td>
-                <input type="text" id="name" class="form-control" required minlength="4" maxlength="24" name="name" [(ngModel)]="model.name">
-        </tr>
-        <tr>
-            <th>ID</th>
-            <td><input type="text" [(ngModel)]="model.id"></td>
-        </tr>
-        <tr>
-            <th>PASSWORD</th>
-            <td><input type="text" [(ngModel)]="model.password"></td>
-        </tr>
-        <tr>
-            <th>Shop Name</th>
-            <td><input type="text" [(ngModel)]="model.shopname"></td>
-        </tr>
-        <tr>
-            <th>Address</th>
-            <td><input type="text" [(ngModel)]="model.address"></td>
-        </tr>
-        <tr>
-            <th>Role</th>
-            <td><input type="text" [(ngModel)]="model.role"></td>
-        </tr>
-        <tr>
-            <th>Phone Number 1</th>
-            <td><input type="text" [(ngModel)]="model.phone1"></td>
-        </tr>
-        <tr>
-            <th>Phone Number 2</th>
-            <td><input type="text" [(ngModel)]="model.phone2"></td>
-        </tr>
-        <tr>
-            <th>License Number</th>
-            <td><input type="text" [(ngModel)]="model.lnumber"></td>
-        </tr>
-        <tr>
-            <th>Sales Person Name</th>
-            <td><input type="text" [(ngModel)]="model.salespersonname"></td>
-        </tr>
-        <tr>
-            <th>Types</th>
-            <td><select class="form-control" id="userType" required>
+		<table border="2">
+            <tr>
+                <th>NAME</th>
+                    <td>
+                        <input type="text" id="name" class="form-control" required minlength="4" maxlength="24" name="name" [(ngModel)]="model.name">
+                </tr>
+                <tr>
+                    <th>PASSWORD</th>
+                    <td><input type="text" [(ngModel)]="model.password"></td>
+                </tr>					
+                <tr>
+                    <th>Shop Name</th>
+                    <td><input type="text" [(ngModel)]="model.shopName"></td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td><input type="text" [(ngModel)]="model.address"></td>
+                </tr>
+                <tr>
+                    <th>Role</th>
+                    <td><input type="text" [(ngModel)]="model.role"></td>
+                </tr>
+                <tr>
+                    <th>Phone Number 1</th>
+                    <td><input type="text" [(ngModel)]="model.phoneNum1"></td>
+                </tr>
+                <tr>
+                    <th>Phone Number 2</th>
+                    <td><input type="text" [(ngModel)]="model.phoneNum2"></td>
+				</tr>
+                <tr>
+                    <th>License Number</th>
+                    <td><input type="text" [(ngModel)]="model.licenseNumber"></td>
+                </tr>
+                <tr>
+                    <th>Sales Person Name</th>
+                    <td><input type="text" [(ngModel)]="model.salesPerson"></td>
+                </tr>
+                <tr>
+                    <th>Types</th>
+                    <td><select class="form-control" id="userType" required>
                         <option *ngFor="let user of userTypes" [value]="title">{{user}}</option>
                         </select>
-            </td>
-        </tr>
-        <tr>
-            <th>Email</th>
-            <td><input type="text" [(ngModel)]="model.email"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button (click)="registerNewUser()">Register</button></td>
-        </tr>
-    </table>
-
-</div>
+                    </td>                    
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type="text" [(ngModel)]="model.email"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button (click)="registerNewUser()">Register</button></td>
+                </tr>	
+        </table>
+ 
+    </div>

@@ -13,8 +13,12 @@ import { FetchRegistrationDetailsComponent } from './fetch-registration-details/
 
 import { HttpModule } from '@angular/http';
 //import { MaterialModule } from '@angular/material';
+//import { AlertModule } from 'ngx-bootstrap';
+import{HeaderComponent} from './header/header.component'
+import{FooterComponent} from './footer/footer.component'
 
 const appRoutes: Routes= [
+  {path:'',component:LoginUserComponent},
   {path:'registration',component:RegistrationComponent},
   {path: 'login',component:LoginUserComponent},
   {path: 'fetchCustDetails', component:FetchRegistrationDetailsComponent}
@@ -26,13 +30,16 @@ const appRoutes: Routes= [
     AppComponent,
     RegistrationComponent,
     LoginUserComponent,
-    FetchRegistrationDetailsComponent
+    FetchRegistrationDetailsComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
+   // AlertModule.forRoot(),
     BrowserModule,
     HttpModule,
-  //  MaterialModule,
-    FormsModule,
+    //MaterialModule,
+	  FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
