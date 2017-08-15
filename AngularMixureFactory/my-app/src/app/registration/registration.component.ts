@@ -13,17 +13,7 @@ export class RegistrationComponent implements OnInit {
 
   public isRestisterSuccess = '';
   constructor(private fetchCustomerDetailsService: FetchCustomerDetailsService ) { }
-  name: string;
-  password:string;
-  shopname: string;
-  address: string;
-  role: string;
-  phone1: string;
-  phone2: string;
-  lnumber: string;
-  salespersonname: string;
-  email: string;
-
+  
   model: any = {};
 
   ngOnInit() {

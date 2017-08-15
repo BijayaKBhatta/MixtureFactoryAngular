@@ -14,6 +14,8 @@ password: string;
   constructor(private fetchCustomerDetailsService: FetchCustomerDetailsService ) { }
   public isloginSuccess = '';
 
+  model: any = {};
+
   ngOnInit() {
   }
 
@@ -22,7 +24,7 @@ loginUser()
     //this.isloginSuccess = this.username;
    // this.isloginSuccess = this.isloginSuccess+this.loginUser;
 
-               this.fetchCustomerDetailsService.loginCustomerDetails(this.username).subscribe(
+               this.fetchCustomerDetailsService.loginCustomerDetails(this.model).subscribe(
                 res => {
                   console.log(res);
                   this.isloginSuccess = 'Response from webserice with username :    --'+res.id+'password: '+res.name;

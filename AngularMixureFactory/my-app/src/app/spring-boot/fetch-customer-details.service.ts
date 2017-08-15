@@ -29,18 +29,18 @@ let options = new RequestOptions({ headers: headers });
   .map(res => res.json())
 }
 
-//public postImplementNew(name1,password1,shopname,address,role,
-  //            phone1, phone2, lnumber, salespersonname,email): Observable<any>
-  
 public postImplementNew(user: User): Observable<any>
 {
-  let name1 = user.name;
-  let password1 = user.password;
- // console.log("in post call");
-  let body = JSON.stringify({ id: '13', name: name1,  password:password1});
+/* 
+Read html filed value using below code
+let name1 = user.name;
+let password1 = user.password;
+console.log("in post call");
+let body = JSON.stringify({ id: '13', name: name1,  password:password1});
+*/
 let headers = new Headers({ 'Content-Type': 'application/json' });
 let options = new RequestOptions({ headers: headers });
-  const URL = 'http://localhost:8185/registeruser/register/add';
+const URL = 'http://localhost:8185/registeruser/register/add';
   return this.http.post(URL,
     user,
       options
@@ -51,11 +51,8 @@ let options = new RequestOptions({ headers: headers });
 public getCustomerDetails(searchId): Observable<any>
   {
     const searchCust = 'Customer details';
-    //call API Here
     var idd=10;
     const URL = 'http://127.0.0.1:8080/productdata?id='+searchId;
-    //const URL = 'http://services.groupkt.com/country/get/iso2code/IN';
-    //this.http.post(URL,aaa JSON.stringify(searchCust), {headers:{'':''})
     return this.http.get(URL).map(
       res => {
         const data = res.json();
@@ -65,25 +62,17 @@ public getCustomerDetails(searchId): Observable<any>
 
   }
 
-  public loginCustomerDetails(username): Observable<any>
-  {
-    const searchCust = 'Customer details';
-    //call API Here
-    var idd=111;
-    const URL = 'http://127.0.0.1:8080/productdata?id='+username;
-    console.log(URL);
-    //const URL = 'http://services.groupkt.com/country/get/iso2code/IN';
-    //this.http.post(URL,aaa JSON.stringify(searchCust), {headers:{'':''})
-    return this.http.get(URL).map(
-      res => {
-        const data = res.json();
-        return data;
-      }
+  public loginCustomerDetails(user: User): Observable<any>
+  {  
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    const URL = 'http://localhost:8185/registeruser/login';
+    return this.http.post(URL,
+      user,
+      options
     )
-
+  .map(res => res.json())
   }
-
-
 
 
   /*public getCustomerDetails()
