@@ -32,13 +32,13 @@ loginUser()
                   if (res==false)
                     this.isloginSuccess = 'Please enter correct Username and Passwird'+res;//.id+'password: '+res.name;
                     else
-                      this.router.navigateByUrl('<pathDefinedInRouteConfig>');
+                      this.router.navigate(['contactus']);
+                      //this.router.navigateByUrl('<contactus>');
                     //this.country = res.RestResponse.messages[0] ;
                   //this.country = this.country + res.RestResponse.messages[1];
                   //json handing
                 } 
                );
-
 
   }
 

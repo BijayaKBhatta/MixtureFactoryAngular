@@ -15,13 +15,17 @@ import { HttpModule } from '@angular/http';
 //import { MaterialModule } from '@angular/material';
 //import { AlertModule } from 'ngx-bootstrap';
 import{HeaderComponent} from './header/header.component'
-import{FooterComponent} from './footer/footer.component'
+import{FooterComponent} from './footer/footer.component';
+import { AbutusComponent } from './abutus/abutus.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component'
 
 const appRoutes: Routes= [
   {path:'',component:LoginUserComponent},
   {path:'registration',component:RegistrationComponent},
   {path: 'login',component:LoginUserComponent},
-  {path: 'fetchCustDetails', component:FetchRegistrationDetailsComponent}
+  {path: 'fetchCustDetails', component:FetchRegistrationDetailsComponent},
+  {path: 'contactus', component:ContactusComponent}
 
 ];
 
@@ -32,7 +36,10 @@ const appRoutes: Routes= [
     LoginUserComponent,
     FetchRegistrationDetailsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AbutusComponent,
+    AboutusComponent,
+    ContactusComponent
   ],
   imports: [
    // AlertModule.forRoot(),
