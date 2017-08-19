@@ -1,37 +1,33 @@
-<br>
-<br><br><br><br>
-<h1>Login here</h1>
-<div id="box">{{isloginSuccess}}</div>
-<div style="text-align:center">
-    <table border="2">
-        <tr>
-            <th>NAME</th>
-
-            <td>
-                <input id="name" name="name" class="form-control" required minlength="4" forbiddenName="bob" [(ngModel)]="model.name" #name="ngModel">
-
-                <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-
-                    <div *ngIf="name.errors.required">
-                        Name is required.
-                    </div>
-                    <div *ngIf="name.errors.minlength">
-                        Name must be at least 4 characters long.
-                    </div>
-                    <div *ngIf="name.errors.forbiddenName">
-                        Name cannot be Bob.
-                    </div>
+ {{isloginSuccess}}
+<div id="login">
+    <div id="company">
+        <h1> Please Login</h1>
+    </div>
+    <form action="javascript:void(0);" method="get">
+        <fieldset>
+            <p>Username</p> <input type="text" required value="Username" name="name" required minlength="4" class="form-control"
+            onBlur="if(this.value=='')this.value='Username'" 
+            onFocus="if(this.value=='Username')this.value='' "
+                [(ngModel)]="model.name" #name="ngModel"
+				forbiddenName="bob">
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                <div *ngIf="name.errors.required">
+                    Name is required.
                 </div>
-            </td>
+                <div *ngIf="name.errors.minlength">
+                    Name must be at least 4 characters long.
+                </div>
+                <div *ngIf="name.errors.forbiddenName">
+                    Name cannot be Bob.
+                </div>
+            </div>
+            Password
+            <p>
+                <input type="password" required value="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' ">
+            </p>
 
-        </tr>
-        <tr>
-            <th>PASSWORD</th>
-            <td><input type="password" [(ngModel)]="model.password"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button (click)="loginUser()">Login</button></td>
-        </tr>
-    </table>
+            <p><a href="#">Forgot Password?</a></p>
+            <p><input type="submit" value="Login" onsubmit="loginUser()"></p>
+        </fieldset>
+    </form>
 </div>
