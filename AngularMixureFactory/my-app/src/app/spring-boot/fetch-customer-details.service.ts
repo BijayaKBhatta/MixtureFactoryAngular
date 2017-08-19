@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http , Headers, RequestOptions} from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { User } from '../model/user';
+import { ContactUs } from '../contactus/contactus';
 
 import 'rxjs/add/operator/map';
 @Injectable()
@@ -29,7 +30,7 @@ let options = new RequestOptions({ headers: headers });
   .map(res => res.json())
 }
 
-public postImplementNew(user: User): Observable<any>
+public postImplementNew(contactUs: ContactUs): Observable<any>
 {
 /* 
 Read html filed value using below code
@@ -42,7 +43,7 @@ let headers = new Headers({ 'Content-Type': 'application/json' });
 let options = new RequestOptions({ headers: headers });
 const URL = 'http://localhost:8185/registeruser/register/add';
   return this.http.post(URL,
-    user,
+    contactUs,
       options
     )
   .map(res => res.json())
@@ -61,6 +62,22 @@ public getCustomerDetails(searchId): Observable<any>
     )
 
   }
+
+
+public contactUs(user: User): Observable<any>
+  {  
+    let body = JSON.stringify({ id: '4', name: 'Bijaya', email: 'bijaya@gmail.com' });
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    const URL = 'http://localhost:8185/registeruser/contactus';
+    return this.http.post(URL,
+      body,
+      options
+    )
+  .map(res => res.json())
+  }
+
+
 
   public loginCustomerDetails(user: User): Observable<any>
   {  

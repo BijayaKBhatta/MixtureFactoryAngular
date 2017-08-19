@@ -1,3 +1,29 @@
-<p>
-  contactus works!
-</p>
+
+<!--<div id="box">  Some text </div>-->
+
+<table border="2" >
+        <tr>
+            <th>Name</th>
+
+            <td>
+                <input id="name" name="name" [(ngModel)]="model.name" class="form-control" required minlength="4" forbiddenName="bob" [(ngModel)]="model.name" #name="ngModel">
+            </td>
+
+        </tr>
+          <tr>
+            <th>Email</th>
+            <td><input type="password" [(ngModel)]="model.email"></td>
+        </tr>
+          <tr>
+            <th>Subject</th>
+            <td><input type="password" [(ngModel)]="model.subject"></td>
+        </tr>
+        <tr>
+            <th>Message</th>
+            <td><input type="password" [(ngModel)]="model.message"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button (click)="contactUs()">Login</button></td>
+        </tr>
+    </table>
