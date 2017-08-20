@@ -1,0 +1,13 @@
+<h1>
+  All Product 
+</h1>
+  
+
+  <div id="producList" *ngFor="let product of products; let idx = index" class="namkeenItem {{product.split(' ').join('')}}" (click)="showProduct(idx,product)">
+    <!--{{idx}} -->
+    
+      <div [ngStyle]="{'color': 'red', 'font-size': '20px', 'font-weight': 'bold'}"> {{product}}</div>
+
+  </div>
+
+

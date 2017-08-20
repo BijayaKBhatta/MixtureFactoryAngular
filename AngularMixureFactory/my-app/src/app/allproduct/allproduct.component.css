@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+    padding: 40px 0;
+    color: black;
+    border-bottom: 0 0 11px white;
+        border-bottom: 1px solid;
+        margin-bottom: auto;
+        margin: auto
+
+}
+#producList{
+    
+    float: left;
+    height: 400px;
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+    background-size: auto 100%!important;
+    position: relative;
+
+}
+.ChanaDal{
+    background: url('http://2.wlimg.com/product_images/bc-full/dir_19/552399/chana-dal-namkeen-1285259.jpg') no-repeat;
+}
+.AlooBhujia{
+    background: url('http://www.manjulaskitchen.com/blog/wp-content/uploads/aloo_bhujia_potato_sev.jpg') no-repeat;
+}
+.MoongDal{
+    background: url('https://i.ytimg.com/vi/5bO3ouBAlGQ/maxresdefault.jpg') no-repeat;
+}

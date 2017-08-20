@@ -1,4 +1,4 @@
- {{isloginSuccess}}
+ <div id="error">{{isloginSuccess}}</div>
 <div id="login">
     <div id="company">
         <h1> Please Login</h1>
@@ -11,13 +11,13 @@
                 [(ngModel)]="model.name" #name="ngModel"
 				forbiddenName="bob">
             <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-                <div *ngIf="name.errors.required">
+                <div *ngIf="name.errors.required" id="error">
                     Name is required.
                 </div>
-                <div *ngIf="name.errors.minlength">
+                <div *ngIf="name.errors.minlength" id="error">
                     Name must be at least 4 characters long.
                 </div>
-                <div *ngIf="name.errors.forbiddenName">
+                <div *ngIf="name.errors.forbiddenName" id="error">
                     Name cannot be Bob.
                 </div>
             </div>

@@ -25,7 +25,6 @@ loginUser()
   {
     //this.isloginSuccess = this.username;
    // this.isloginSuccess = this.isloginSuccess+this.loginUser;
-
                this.fetchCustomerDetailsService.loginCustomerDetails(this.model).subscribe(
                 res => {
                   console.log(res);
@@ -39,7 +38,6 @@ loginUser()
                   //json handing
                 } 
                );
-
   }
 
 }

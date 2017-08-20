@@ -1,0 +1,23 @@
+<p>
+  All Product here .
+  <!--Note that this product will come from -->
+</p>
+
+<ul>
+  <li *ngFor="let namkeen of allNamkeenProducts; let idx = index" (click)="selectedProduct(idx,namkeen)"> 
+    <!--{{idx}}-->
+    {{namkeen}}
+----Give the details product description here
+
+    <div id="addtocart">Add to Cart</div>
+  </li>
+</ul>
+
+
+<ul>
+  <li *ngFor="let cart of recentSelectedProduct; let i = index">
+    {{i}}
+    {{cart}}
+  </li>
+</ul>
+Your Cart is {{recentSelectedProduct}}

@@ -18,14 +18,19 @@ import{HeaderComponent} from './header/header.component'
 import{FooterComponent} from './footer/footer.component';
 import { AbutusComponent } from './abutus/abutus.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { ContactusComponent } from './contactus/contactus.component'
+import { ContactusComponent } from './contactus/contactus.component';
+import { OnlyforExperimentComponent } from './onlyfor-experiment/onlyfor-experiment.component';
+import { AllproductComponent } from './allproduct/allproduct.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component'
 
 const appRoutes: Routes= [
   {path:'',component:LoginUserComponent},
   {path:'registration',component:RegistrationComponent},
   {path: 'login',component:LoginUserComponent},
   {path: 'fetchCustDetails', component:FetchRegistrationDetailsComponent},
-  {path: 'contactus', component:ContactusComponent}
+  {path: 'contactus', component:ContactusComponent},
+  {path: 'allproduct', component:  AllproductComponent},
+  {path: 'productdetails', component:ProductdetailsComponent}
 
 ];
 
@@ -39,7 +44,10 @@ const appRoutes: Routes= [
     FooterComponent,
     AbutusComponent,
     AboutusComponent,
-    ContactusComponent
+    ContactusComponent,
+    OnlyforExperimentComponent,
+    AllproductComponent,
+    ProductdetailsComponent
   ],
   imports: [
    // AlertModule.forRoot(),
