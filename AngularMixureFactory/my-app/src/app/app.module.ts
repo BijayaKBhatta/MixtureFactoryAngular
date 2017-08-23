@@ -12,7 +12,7 @@ import {RouterModule,Routes} from '@angular/router';
 import { FetchRegistrationDetailsComponent } from './fetch-registration-details/fetch-registration-details.component';
 
 import { HttpModule } from '@angular/http';
-//import { MaterialModule } from '@angular/material';
+import { MaterialModule } from '@angular/material';
 //import { AlertModule } from 'ngx-bootstrap';
 import{HeaderComponent} from './header/header.component'
 import{FooterComponent} from './footer/footer.component';
@@ -21,7 +21,8 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { OnlyforExperimentComponent } from './onlyfor-experiment/onlyfor-experiment.component';
 import { AllproductComponent } from './allproduct/allproduct.component';
-import { ProductdetailsComponent } from './productdetails/productdetails.component'
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { ProductComponent } from './product/product.component';
 
 const appRoutes: Routes= [
   {path:'',component:LoginUserComponent},
@@ -47,13 +48,14 @@ const appRoutes: Routes= [
     ContactusComponent,
     OnlyforExperimentComponent,
     AllproductComponent,
-    ProductdetailsComponent
+    ProductdetailsComponent,
+    ProductComponent
   ],
   imports: [
    // AlertModule.forRoot(),
     BrowserModule,
     HttpModule,
-    //MaterialModule,
+    MaterialModule,
 	  FormsModule,
     RouterModule.forRoot(appRoutes)
   ],

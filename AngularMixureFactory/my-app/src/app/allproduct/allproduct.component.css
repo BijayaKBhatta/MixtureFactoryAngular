@@ -11,12 +11,14 @@ h1{
 #producList{
     
     float: left;
-    height: 400px;
+    height: 200px;
     width: 20%;
     text-align: center;
     cursor: pointer;
     background-size: auto 100%!important;
     position: relative;
+    margin: 50px;
+    border: width border-style color;
 
 }
 .ChanaDal{
@@ -28,3 +30,16 @@ h1{
 .MoongDal{
     background: url('https://i.ytimg.com/vi/5bO3ouBAlGQ/maxresdefault.jpg') no-repeat;
 }
+.example-card {
+  width: 400px;
+}
+
+.example-header-image {
+  /*background-image: url('../../../assets/img/examples/shiba1.jpg');
+  background-image: url('http://2.wlimg.com/product_images/bc-full/dir_19/552399/chana-dal-namkeen-1285259.jpg');
+  */
+  background-size: cover;
+  border: width border-style color;
+  border-color: red;
+}
+

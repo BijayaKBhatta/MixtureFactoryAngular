@@ -3,11 +3,28 @@
 </h1>
   
 
-  <div id="producList" *ngFor="let product of products; let idx = index" class="namkeenItem {{product.split(' ').join('')}}" (click)="showProduct(idx,product)">
-    <!--{{idx}} -->
+  <!--<div id="producList" *ngFor="let product of products; let idx = index" class="namkeenItem {{product.split(' ').join('')}}" (click)="showProduct(idx,product)">
+    {{idx}}
     
       <div [ngStyle]="{'color': 'red', 'font-size': '20px', 'font-weight': 'bold'}"> {{product}}</div>
 
-  </div>
+  </div>-->
 
-
+<md-card class="example-card" id="producList" *ngFor="let product of products">
+  <md-card-header>
+    <div md-card-avatar class="example-header-image"></div>
+    <md-card-title></md-card-title>
+    <!--<md-card-subtitle>Catagory</md-card-subtitle>-->
+    <md-card-content>
+    <p>
+      Description of the product:  {{product}}
+    </p>
+  </md-card-content>
+  </md-card-header>
+  <img md-card-image  src="http://2.wlimg.com/product_images/bc-full/dir_19/552399/chana-dal-namkeen-1285259.jpg">
+  <button md-button (click)=showProduct(product)> View Details</button>
+  <a md-raised-button> Add to Cart</a>
+  <md-card-content>    
+  </md-card-content>
+  
+</md-card>
