@@ -20,7 +20,7 @@ export class AllproductComponent implements OnInit {
   }
 
   showProduct(product) {
-    //alert("Product is: "+product);
+    alert("Product is: "+product);
     console.log(product.split(' ').join(''));
     //this.router.navigate(['productdetails', product.split(' ').join('')]);
     this.router.navigate(['productdetails']);
