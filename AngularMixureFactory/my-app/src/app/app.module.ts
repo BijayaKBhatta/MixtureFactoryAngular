@@ -31,7 +31,7 @@ const appRoutes: Routes= [
   {path: 'fetchCustDetails', component:FetchRegistrationDetailsComponent},
   {path: 'contactus', component:ContactusComponent},
   {path: 'allproduct', component:  AllproductComponent},
-  {path: 'productdetails', component:ProductdetailsComponent}
+  {path: 'productdetails/:productId', component:ProductdetailsComponent}
 
 ];
 
