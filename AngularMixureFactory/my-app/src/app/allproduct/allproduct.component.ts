@@ -18,10 +18,14 @@ export class AllproductComponent implements OnInit {
 ]
   //products = ['Chana Dal', 'Aloo Bhujia'];
   constructor(private router: Router) { }
-
+  
   ngOnInit() {
   }
-
+onMouseOver(idx)
+{
+  if(idx==1)
+  this.products_image[1] = 'http://www.manjulaskitchen.com/blog/wp-content/uploads/aloo_bhujia_potato_sev.jpg';
+}
   showProduct(product) {
     var aa = product.split(' ').join('');
     alert("Product is: "+aa);

@@ -22,7 +22,7 @@
     </p>
   </md-card-content>
   </md-card-header>
-  <img md-card-image  src={{products_image[idx]}}>
+  <img md-card-image  src={{products_image[idx]}} (mouseover)="onMouseOver(idx)">
   <button md-button (click)=showProduct(product)> View Details</button>
   <a md-raised-button> Add to Cart</a>
   <md-card-content>    
