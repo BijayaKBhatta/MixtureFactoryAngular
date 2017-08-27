@@ -1,8 +1,19 @@
-<p>
-  productdetails works!
-</p>
-Here is then details of : {{img_name}}
-<img src={{img_url}} (mouseover)="imgsrc=onMouseOver()" (mouseleave)="onMouseOut()" style="max-width: 200%">
+<h1>Item Name: {{img_name}}<br> Price is : 100<br> Size: 250 gm</h1>
+<br>
+<img src={{img_url}} (mouseover)="imgsrc=onMouseOver()" (mouseleave)="onMouseOut()" style="max-width: 200%"> {{zoom_img}}
 
-{{zoom_img}}
 
+
+<md-card class="example-card">
+  <md-card-header>
+    <div md-card-avatar class="example-header-image"></div>
+    <md-card-title></md-card-title>
+    <!--<md-card-subtitle>Catagory</md-card-subtitle>-->
+    <md-card-content>
+    </md-card-content>
+  </md-card-header>
+  <a md-raised-button (click)=showProduct(product)> Add to Cart</a>
+  <md-card-content>
+  </md-card-content>
+
+</md-card>

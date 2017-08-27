@@ -23,6 +23,7 @@ import { OnlyforExperimentComponent } from './onlyfor-experiment/onlyfor-experim
 import { AllproductComponent } from './allproduct/allproduct.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { ProductComponent } from './product/product.component';
+import {DatepickerModule} from 'angular2-material-datepicker';
 
 const appRoutes: Routes= [
   {path:'',component:LoginUserComponent},

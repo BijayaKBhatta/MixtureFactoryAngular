@@ -23,7 +23,6 @@ export class FetchRegistrationDetailsComponent implements OnInit {
   onkeyup(event) {
     this.searchId = event.target.value;
   }
-
   getUser() {
     this.ff = 'Register Suchhhhhhhhcesfull';
     this.fetchCustomerDetailsService.getCustomerDetails(this.str).subscribe(
